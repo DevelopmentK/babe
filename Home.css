@@ -1,0 +1,143 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #fff0f6;
+	font-family: "Protest Riot", sans-serif;
+}
+
+.container {
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #dbdbdb;
+}
+
+.cat-img {
+	width: 30rem;
+	height: 30rem;
+	margin-bottom: 2rem;
+}
+
+.title {
+	font-size: 3.6rem;
+	font-weight: 600;
+	color: red;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.btn {
+	color: red;
+	background: #ffffff;
+}
+
+
+.hidden {
+	display: none;
+}
+
+/*CUSTOMIZE*/
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 25px 20px 22px;
+	box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	background-color: #e8e8e8;
+	border-color: #ffffff;
+	/*box-shadow: red 0px 5px 15px;*/
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 25px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	border-style: solid;
+	border-width: 9px;
+	border-radius: 35px;
+	font-size: 25px;
+	font-weight: 900;
+	color: rgb(134, 124, 124);
+	font-family: monospace;
+	transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), border-color 400ms ease-in-out, background-color 400ms ease-in-out;
+	word-spacing: -2px;
+}
+
+@keyframes movingBorders {
+	0% {
+		border-color: #fce4e4;
+	}
+
+	50% {
+		border-color: #ffd8d8;
+	}
+
+	90% {
+		border-color: #fce4e4;
+	}
+}
+
+button:hover {
+	background: #ffffff;
+	transform: scale(105%);
+	animation: movingBorders 3s infinite;
+}
+
+button svg {
+	margin-right: 11px;
+	fill: rgb(255, 110, 110);
+	transition: opacity 100ms ease-in-out;
+}
+
+.filled {
+	position: absolute;
+	opacity: 0;
+	top: 20px;
+	left: 22px;
+}
+
+@keyframes beatingHeart {
+	0% {
+		transform: scale(1);
+	}
+
+	15% {
+		transform: scale(1.15);
+	}
+
+	30% {
+		transform: scale(1);
+	}
+
+	45% {
+		transform: scale(1.15);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+}
+
+button:hover .empty {
+	opacity: 0;
+}
+
+button:hover .filled {
+	opacity: 1;
+	animation: beatingHeart 1.2s infinite;
+}
